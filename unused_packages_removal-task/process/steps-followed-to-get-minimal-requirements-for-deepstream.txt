@@ -1,0 +1,13 @@
+How this was done (for deepstream)(for backend/requirements_gpu.txt):
+First, a script was written to get the names of all imported packages in all the python files in a parent folder
+Then, using a script, they were separated into 3 categories, namely built-in, third-party, and others. (built-in packages are those that come with python like datetime etc, third-party are those names which are present in requirements.txt, and others are the rest of the imported packages)
+Then, the "others" from above step were manually classified into third-party packages, and neighboring code.
+Then, all the above third-party-packages were installed in a new virtual environment on a local machine (allowing dependencies to be installed)
+Then, the packages common to requirements.txt and all the installed third party packages from above step are considered as first set of minimal packages required.
+Then, a new virtual environment named "test_minimal_deepstream" was created and the above minimal set of packages required are installed without dependencies (pip install -r minimal_requirements.txt --no-deps)
+Then using this virtual environment, ds_vast_pipeline/pipeline.py is run with a previously created project on the website, and all the import errors are fixed by adding each of those packages to the minimal_requirements.txt and installing them with no dependencies
+After it shows no error, run python `camera/main_proc_mgr.py` this command in cmd inside backend folder, and if it shows no error, we are done.
+Then, the service files in restart_services.sh (their parent directory is /etc/systemd/system) are copied to new service files with the word "test_minimal_deepstream_" prepended to them. And those service files were edited to use "test_minimal_deepstream" virtual environment instead of "deepstream" environment. And the restart_services.sh and stop_services.sh are modified to start and stop these new service files.
+And all the import errors were fixed by using error statements in log files after restarting_services each time.
+
+

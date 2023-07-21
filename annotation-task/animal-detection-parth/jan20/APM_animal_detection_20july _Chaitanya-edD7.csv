@@ -1,0 +1,6 @@
+video name,detection,Animal Count in video,video Time (Day/night),FP,comments
+8,2,2,night,0,small size is animal is not getting detected
+9,0,1,night,0,nothing is detected
+10,52,6,night,2,"2 animals are detected as 1 in (frame589,frame1147)"
+11,1,1,day,0,None
+12,43,11-15,day,7,"1 detection having 2 animals in a single frame rest of the detections are correct in (eg frame37), branch of tree as animal in 1 detection rest of the detctions are correct in frame433"

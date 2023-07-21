@@ -1,0 +1,6 @@
+video name,detection,Animal Count in video,video Time (Day/night),FP,comments
+8,18,2,night,36,"tree is detected as animal with double box continously (eg: frame319_part3), stone is detected as animal continously (frame331_part1,frame_865_part1), side wall (frame475_part4), in frame1183_part2 single animal has 2 detections(box), small animal is only detected once."
+9,0,1,night,0,nothing is detected
+10,51,6,night,5,"2 animals are detected as 1 multiple times (frame13_part1,frame115_part1), animals which are lying down are not getting detected"
+11,0,1,day,28,"stone is getting detected as animal continously (frame127_part2, frame133_part1, frame145_part2)"
+12,71,11-15,day,6,"2 animals in a single farme and get detected only once (frame1_part1),in (frame109_part2,frame235_part2,frame313_part2) in 1 detection 1 frame having 2 animals rest detections are correct,1 wrong detection in (frame337_part2,frame343_part2,frame367_part2),in frame679_part2 in 1 detection a single animal has 2 frames,"

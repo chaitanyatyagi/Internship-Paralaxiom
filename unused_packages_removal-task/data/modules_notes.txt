@@ -1,0 +1,8 @@
+The names of std_lib_modules are collected from python 3.10 even though platform is being run on python 3.6
+because sys.std_lib_modules is not available in the earlier verson.
+
+
+The names of third party modules are obtained from requirements.txt
+    For now, the hyphens in the names (-) are converted into underscores
+    And the names are converted to lowercase (this may cause error/issue when there are packages with same name
+     but different letters i.e. upper/lower case, (ignored for now))

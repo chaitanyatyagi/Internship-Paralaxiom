@@ -1,0 +1,9 @@
+video,detection bbox,Animal Count in video,video Time (Day/night),FP,animal pos,comments
+10,8,4,night,1,"walking,standing,lying",tyre as animal (frame151)
+11,400+,4,night,0,walking,None
+12,6,9,day,0,"walking,standing,running",pixelated and far away animals are not getting detected
+13,11,1,day,0,walking,none
+14,19,1,night,0,walking,none
+15,37,2,night,0,"walking,running",none
+6,157,4-5,night,0,"sitting, walking",none
+7,31,1,day,0,"walking,sitting",none

@@ -1,0 +1,30 @@
+first create new virtual enviornment - test_minimal_deepstream - `mkvirtualenvtest_minimal_deepstream`
+
+install packages in requirments file with flag of no dependencies - pip install -r {path to the requirement file (minimal_requirements_with_version_numbers_deepstream.txt)} --no-deps
+make sure your env is activate
+
+copy cv2 file from this path- /opt/paralaxiom/venv/deepstream/lib/python3.6/site-packages/cv2.cpython-36m-x86_64-linux-gnu.so to your desired location
+
+now in byobu, create 2 parallel windows, in first window open backend folder and activate virtual enviornment (pllatform), in second window open nvast folder and activate virtual enviornment (test_minimal_deepstream
+
+now in second window - python ds_vast_pipeline/pipeline.py
+
+after this, it will throw somw error, about module missing, then simply, go to "/opt/paralaxiom/vast/sagar_platform/paralaxiom_remove_unused_packages/find_minimal_deepstream/" = inside this we have two files packages and minimal_requirements, copy missing module from packages file to minimal_requirements and then run no dependencies command, then recheck it
+
+after it shows no error, run python `camera/main_proc_mgr.py` this command in first screen, and if it shows no error, we are done.
+
+
+
+
+FOLDER STRUCTURE
+/opt/paralaxiom/vast/sagar_platform
+two folders: main, paralaxiom_remove_unused_packages
+/opt/paralaxiom/vast/sagar_platform/paralaxiom_remove_unused_packages/find_minimal_deepstream/minimal_requirements_with_version_numbers_deepstream.txt
+python camera/main_proc_mgr.py
+
+
+
+Host pinak
+    HostName routing.paralaxiom.com
+    User vast
+    Port 16071
